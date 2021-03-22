@@ -136,9 +136,9 @@ def cross_validate(model_name):
     test_data_generator = ImageDataGenerator(rescale=None)
 
 
-    single_label_df = pd.read_csv('single_label.csv')
-    multi_label_df = pd.read_csv('multi_label.csv')
-    negative_df = pd.read_csv('negative_label.csv')
+    single_label_df = pd.read_csv('single_label_no_cyn_set.csv')
+    multi_label_df = pd.read_csv('multi_label_no_cyn_set.csv')
+    negative_df = pd.read_csv('negative_label_no_cyn_set.csv')
     negative_df = shuffle(negative_df)
     all_df = single_label_df.append(negative_df[1:])
     all_df = all_df.append(multi_label_df[1:])
